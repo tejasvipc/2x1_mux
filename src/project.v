@@ -15,13 +15,13 @@ module tt_um_mux_2x1 (
     input  wire       clk,      // clock
     input  wire       rst_n     // reset_n - low to reset
 );
-
-    assign S=ui_in[0];
-    assign A=ui_in[1];
-    assign B=ui_in[2];
+    
+    assign S = ui_in[0];
+    assign A = ui_in[1];
+    assign B = ui_in[2];
 
   // All output pins must be assigned. If not used, assign to 0.
-assign Y= S ? A : B;
+    assign Y = S ? A : B;
     assign uo_out[0]=Y;
     assign uo_out[7:1]=7'b0;
 
